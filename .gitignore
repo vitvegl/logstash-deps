@@ -1,0 +1,6 @@
+BUILD*
+*RPMS
+SOURCES/*.tar.*
+SOURCES/*.gem
+SOURCES/*.zip
+SPECS/.*.swp
