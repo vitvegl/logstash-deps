@@ -1,0 +1,20 @@
+--- insist-1.0.0/insist.gemspec
++++ insist-1.0.0/insist.gemspec
+@@ -8,7 +8,16 @@ Gem::Specification.new do |spec|
+   spec.license = "Apache 2"
+ 
+   # Note: You should set the version explicitly.
+-  #spec.add_dependency "cabin", ">0" # for logging. apache 2 license
++  spec.add_dependency "cabin", "~> 0.7", ">= 0.7.0" # for logging. apache 2 license
++
++  files = []
++  dirs = %w{lib}
++  dirs.each do |dir|
++    files += Dir["#{dir}/**/*"]
++  end
++
++  files << 'lib/insist.rb'
++
+   spec.files = files
+   spec.require_paths << "lib"
+   spec.bindir = "bin"
